@@ -95,6 +95,7 @@ function displayPlayerBench() {
     // Display cards for all players
     displayPlayerCards();
 }
+
 // This function is called at the beginning of the game play to initialize
 // PER for each player, and at each quarter to do two things: 
 // 1. Ensure the players currently on the court have the correct PER represented
