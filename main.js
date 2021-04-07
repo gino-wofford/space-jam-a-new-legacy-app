@@ -25,6 +25,7 @@ var totalAvePER = 0;
 
 
 
+
 // Function to read in all player stats.
 function processPlayers(allPlayerStats) {
     // Split the data by newline into an array.
