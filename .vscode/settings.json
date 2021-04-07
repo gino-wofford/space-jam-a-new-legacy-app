@@ -5,8 +5,8 @@
     "debug.internalConsoleOptions": "neverOpen",
     "staticWebApps.appSubpath": "/",
     "staticWebApps.apiSubpath": "",
-    "staticWebApps.outputSubpath": "build",
-    "azureFunctions.pythonVenv": ".venv",
-    "azureFunctions.projectLanguage": "Python",
+    "staticWebApps.outputSubpath": "build",    
+    "azureFunctions.enableJavaRemoteDebugging": false,
+    "azureFunctions.projectLanguage": "JavaScript",
     "azureFunctions.projectRuntime": "~3"
 }
