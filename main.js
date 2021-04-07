@@ -103,7 +103,7 @@ function displayPlayerBench() {
 // 2. Update the stats for each player for the current quarter
 function displayPlayerCards() {
     // Get the div in which the stats will be shown.
-
+// *****SEE THIS****
 
     // For each player, create a player stat card to show the PER for that player for a 
     // specific quarter.
