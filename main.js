@@ -1,12 +1,12 @@
 // A map of playerName to an array of playerPER values
 // A map of playerName to an array of playerPER values
-var playerMap = new Map();
+let playerMap = new Map();
 
 
 // Variables to keep track of constants 
 // Variables to keep track of constants
-const maxPlayersOnCourt = 5;
-const numQuarters = 4;
+var maxPlayersOnCourt = 5;
+var numQuarters = 4;
 
 
 // Variables to track state throughout the game
@@ -35,7 +35,7 @@ function processPlayers(allPlayerStats) {
     allPlayerStatLines.shift();
 
     // Loop through the 15 players and create a map entry of player name to player PER
-    for (var statLine of allPlayerStatLines) {
+    for (var statLine in allPlayerStatLines) {
         // Get all individual stat values
         var stats = statLine.split(',');
         // If it's just an empty line, skip it
@@ -67,7 +67,7 @@ function displayPlayerBench() {
     var bench = document.getElementById('playersOnBench');
 
     // For each player, create a button. 
-    for (let playerName of playerMap.keys()) {
+    for (var playerName in playerMap.keys()) {
         // Create a button for each player
         var newPlayer = document.createElement('button');
 
@@ -107,7 +107,7 @@ function displayPlayerCards() {
 
     // For each player, create a player stat card to show the PER for that player for a 
     // specific quarter.
-    for (let [playerName, playerStats] of playerMap.entries()) {
+    for (let [playerName, playerStats] in playerMap.entries()) {
         // Create an overall div that will contain the player stat information.
         var playerCard = document.createElement('div');
 
@@ -205,7 +205,7 @@ function movePlayers() {
 function updateCardsInGame() {
     // For each player, update their player stat card to show PER for that player for 
     // a specific quarter.
-    for (let [playerName, playerStats] of playerMap.entries()) {
+    for (let [playerName, playerStats] in playerMap.entries()) {
         document.getElementById(playerName + '_card').children[1].innerText = 'PER: '+playerStats[currentQuarter].toPrecision(4);
     }
 
